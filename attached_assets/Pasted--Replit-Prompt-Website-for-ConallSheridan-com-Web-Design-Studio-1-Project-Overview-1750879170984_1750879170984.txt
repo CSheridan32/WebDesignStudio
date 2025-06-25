@@ -1,0 +1,97 @@
+**Replit Prompt – Website for ConallSheridan.com (Web Design Studio)**
+
+---
+
+### 1. Project Overview
+
+Design a polished, premium, and artistically expressive website for **Conall Sheridan**, a modern web designer focused on small businesses and tradespeople. The site should communicate quality, creativity, and personal attention—positioning Conall as a go-to partner for **beautiful websites for businesses that don’t have time to figure it out themselves**.
+
+The site should blend **clean typography, bold layout, and subtle animations**, and feel visually inspired, showing off both flair and professionalism.
+
+---
+
+### 2. Brand Essence
+
+* **Business name:** Conall Sheridan (can evolve to “Conall Sheridan Web Design”)
+* **Tagline suggestion:** “Beautiful websites for small businesses who never thought they could afford them.”
+* **Tone:** Calm, confident, stylish
+* **Voice:** Direct, helpful, warm, but not casual
+
+---
+
+### 3. Visual Direction
+
+| Element           | Guidance                                                                  |
+| ----------------- | ------------------------------------------------------------------------- |
+| **Color palette** | Warm Neutrals + Deep Ink Blue + Accent Gold or Coral                      |
+| **Typography**    | Headings: Playfair Display or Cormorant Garamond · Body: Inter or Lato    |
+| **Mood**          | Artsy, premium, editorial-style layout                                    |
+| **Imagery**       | Abstract textures, subtle overlays, examples of client work, modern icons |
+| **Motion**        | Subtle entrance transitions, hover animations on cards/buttons            |
+
+---
+
+### 4. Structure & Sections
+
+1. **Home**
+   • Hero statement + CTA (“Let’s build something beautiful.”)
+   • Showcase of industries served (tiles or icons)
+   • Why small businesses trust Conall – 3 core values/approach
+   • Preview of work or placeholder cards for future portfolio
+
+2. **Services**
+   • Web design (custom builds + redesigns)
+   • Hosting, SEO setup, content structuring
+   • Email + contact forms
+   • Ongoing support (optional)
+
+3. **Industries Served**
+   • Section or page highlighting: Hairdressers, Cafés, Restaurants, Dentists, Plumbers, Electricians, Law Firms, etc.
+   • Visual icons or cards with short messages ("Get found, get booked.")
+
+4. **Portfolio (Coming Soon)**
+   • Placeholders or blurred mockups with a “Let’s talk about yours” CTA
+
+5. **About**
+   • Personal intro from Conall (e.g. “I build websites that make it easy for customers to trust you.”)
+   • Emphasis on reliability, simplicity, and aesthetics
+
+6. **Contact**
+   • Contact form (Name, Email, Message) + link to direct email
+   • Encouraging subheadline: “Start your new website with one message.”
+
+---
+
+### 5. Functional Requirements
+
+* Responsive, mobile-first layout
+* Contact form with validation
+* Clean, accessible design
+* Core Web Vitals ≥ 90
+* Editable content via simple HTML/CSS or JS `content.js` config
+* Ready for deployment to `conallsheridan.com`
+
+---
+
+### 6. Keywords for SEO
+
+web design for tradespeople, small business web designer Ireland, Dublin freelance web design, affordable business websites, websites for salons cafés plumbers
+
+---
+
+### 7. Metadata Example
+
+```html
+<title>Conall Sheridan | Beautiful Websites for Small Businesses</title>
+<meta name="description" content="Conall Sheridan builds clean, modern websites for cafés, salons, tradespeople, and small firms. Accessible design that elevates your business online." />
+```
+
+---
+
+### 8. Voice Prompt for Replit
+
+> **“Build a premium, artsy website for ‘Conall Sheridan’, a solo web designer creating beautiful websites for small businesses like hairdressers, cafés, plumbers, and dentists. Use a neutral + ink blue palette, Playfair Display for headings, and Inter for body text. Include pages for Home, Services, Industries Served, Portfolio (Coming Soon), About, and Contact. Emphasise elegance and trust. Add a working contact form and room for future portfolio items. Responsive, clean, editorial-style layout. No branding or ads.”**
+
+---
+
+**End of Prompt**
