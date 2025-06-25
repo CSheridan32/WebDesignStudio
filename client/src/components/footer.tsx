@@ -1,3 +1,5 @@
+import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_12_04 PM_1750889582521.png";
+
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -11,7 +13,14 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-playfair text-2xl font-semibold text-ink-800 mb-4">Conall Sheridan</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logoImage} 
+                alt="Conall Sheridan Logo" 
+                className="h-8 w-auto"
+              />
+              <h3 className="font-playfair text-2xl font-semibold text-ink-800">Conall Sheridan</h3>
+            </div>
             <p className="text-warm-600">Beautiful websites for small businesses who never thought they could afford them.</p>
           </div>
           

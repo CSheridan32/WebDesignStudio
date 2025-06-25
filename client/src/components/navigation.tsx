@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_12_04 PM_1750889582521.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +17,15 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-warm-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="font-playfair text-2xl font-semibold text-ink-800">
-            Conall Sheridan
+          <div className="flex items-center space-x-3">
+            <img 
+              src={logoImage} 
+              alt="Conall Sheridan Logo" 
+              className="h-10 w-auto"
+            />
+            <span className="font-playfair text-2xl font-semibold text-ink-800">
+              Conall Sheridan
+            </span>
           </div>
           
           {/* Desktop Navigation */}
