@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_12_04 PM_1750889582521.png";
+import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_19_09 PM_1750889973785.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
