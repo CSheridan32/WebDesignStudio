@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Heart, Clock, Smartphone } from "lucide-react";
+import Heart from "lucide-react/dist/esm/icons/heart";
+import Clock from "lucide-react/dist/esm/icons/clock";
+import Smartphone from "lucide-react/dist/esm/icons/smartphone";
 
 const values = [
   {
