@@ -123,16 +123,35 @@ The application is configured for static deployment in `.replit` but the current
 - Build creates both static files (dist/public) and Node.js server file (dist/index.js)
 - Static deployment expects only static HTML/CSS/JS files in the dist directory
 - No index.html found at dist root (files are in dist/public subdirectory)
+- Vite configuration outputs to dist/public but static deployment expects files at dist root
 
-**Solution Applied**:
-- Created custom build scripts (build-frontend.js, quick-build.sh) that only build the frontend
-- Scripts move static files from dist/public to dist root for proper static deployment
-- Original build command in package.json builds both frontend and backend (kept for development)
+**Solutions Applied**:
+
+### Primary Solution: Static Build Scripts
+- **build-for-static-deployment.sh**: Complete static deployment script that builds frontend and reorganizes files
+- **create-static-deployment.js**: Node.js utility to move files from dist/public to dist root
+- **build-static-deployment.js**: Advanced build script with timeout handling and error checking
+
+### How to Use:
+1. **For static deployment**: Run `./build-for-static-deployment.sh`
+2. **To fix existing build**: Run `node create-static-deployment.js` (after running vite build)
+3. **Alternative method**: Use any of the backup scripts (quick-build.sh, build-static.js, etc.)
+
+### Technical Details:
+- Vite config cannot be modified (forbidden in environment) but outputs to dist/public
+- Scripts automatically move all files from dist/public to dist root
+- Ensures index.html is at dist root for proper static hosting
+- Removes empty dist/public directory after moving files
+- Includes verification steps to ensure proper deployment structure
 
 # Changelog
 
-Changelog:
 - June 28, 2025: Fixed static deployment configuration and build process
+  - Created multiple build scripts to handle Vite output directory issue
+  - Added build-for-static-deployment.sh as primary solution
+  - Added create-static-deployment.js for file reorganization
+  - Updated documentation with deployment instructions
+  - Vite outputs to dist/public but static deployment needs files at dist root
 - June 25, 2025: Initial setup
 
 # User Preferences
