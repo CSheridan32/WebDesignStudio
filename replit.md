@@ -114,10 +114,26 @@ Located in `shared/schema.ts`:
 - **Production**: PostgreSQL via Drizzle ORM
 - Interface-based design allows easy switching between storage backends
 
+# Deployment Issues and Solutions
+
+## Static Deployment Configuration
+The application is configured for static deployment in `.replit` but the current build process creates both frontend and backend outputs, causing deployment failures.
+
+**Issue**: 
+- Build creates both static files (dist/public) and Node.js server file (dist/index.js)
+- Static deployment expects only static HTML/CSS/JS files in the dist directory
+- No index.html found at dist root (files are in dist/public subdirectory)
+
+**Solution Applied**:
+- Created custom build scripts (build-frontend.js, quick-build.sh) that only build the frontend
+- Scripts move static files from dist/public to dist root for proper static deployment
+- Original build command in package.json builds both frontend and backend (kept for development)
+
 # Changelog
 
 Changelog:
-- June 25, 2025. Initial setup
+- June 28, 2025: Fixed static deployment configuration and build process
+- June 25, 2025: Initial setup
 
 # User Preferences
 
