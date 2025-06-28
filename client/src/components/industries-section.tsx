@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Scissors, Coffee, Heart, Wrench, Zap, Scale, Settings, MoreHorizontal } from "lucide-react";
+import Scissors from "lucide-react/dist/esm/icons/scissors";
+import Coffee from "lucide-react/dist/esm/icons/coffee";
+import Heart from "lucide-react/dist/esm/icons/heart";
+import Wrench from "lucide-react/dist/esm/icons/wrench";
+import Zap from "lucide-react/dist/esm/icons/zap";
+import Scale from "lucide-react/dist/esm/icons/scale";
+import Settings from "lucide-react/dist/esm/icons/settings";
+import MoreHorizontal from "lucide-react/dist/esm/icons/more-horizontal";
 
 const industries = [
   {

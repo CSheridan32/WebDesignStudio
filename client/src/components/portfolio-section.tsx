@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ImageIcon } from "lucide-react";
+import ImageIcon from "lucide-react/dist/esm/icons/image";
 
 const portfolioItems = [
   {

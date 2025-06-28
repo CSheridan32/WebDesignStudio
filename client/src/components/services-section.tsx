@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import Check from "lucide-react/dist/esm/icons/check";
 
 const services = [
   {

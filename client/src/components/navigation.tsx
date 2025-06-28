@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
 import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_19_09 PM_1750889973785.png";
 
 export default function Navigation() {
