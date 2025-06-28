@@ -1,0 +1,103 @@
+1 Reset to a clean code base (optional but recommended)
+In the Git panel (left sidebar) pick the last commit where the dev preview looked perfect.
+
+Click Reset → Hard.
+If you’re not using Git, make a manual backup of your current folder first.
+
+2 Trim the Lucide-React imports (avoids the timeout)
+Open every file where you import icons and change this pattern:
+
+diff
+Copy
+Edit
+- import { Check, ArrowRight, Trash } from "lucide-react";
++ import Check      from "lucide-react/dist/esm/icons/check";
++ import ArrowRight from "lucide-react/dist/esm/icons/arrow-right";
++ import Trash      from "lucide-react/dist/esm/icons/trash";
+Why? Vite now bundles only the icons you list, instead of compiling ~3 000 SVGs.
+
+3 Install & wire up Tailwind correctly
+bash
+Copy
+Edit
+# Still in the Replit shell
+pnpm add -D tailwindcss postcss autoprefixer vite-plugin-tailwind
+pnpx tailwindcss init -p          # ← creates tailwind.config.js & postcss.config.js
+vite.config.js / vite.config.mjs
+
+js
+Copy
+Edit
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwind from "vite-plugin-tailwind";
+
+export default defineConfig({
+  plugins: [react(), tailwind()],
+  build: {
+    outDir: "dist",   // 👉 must be exactly "dist"
+    emptyOutDir: true
+  }
+});
+4 Simplify the scripts in package.json
+jsonc
+Copy
+Edit
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
+Delete every experimental script or helper file the previous agent added (e.g. compiled-build.js, “move-files”, etc.).
+
+5 Clear caches (one-time)
+bash
+Copy
+Edit
+rm -rf dist node_modules .vite
+pnpm install
+6 Local smoke-test (absolutely essential)
+bash
+Copy
+Edit
+npm run build          # should finish in ≈5-10 s
+npx serve dist         # or: npm run preview
+Open the URL that serve prints (usually http://localhost:3000).
+
+✅ Looks perfect? Move on.
+
+❌ Something missing? Stop and tell me what the browser console / terminal says.
+
+7 Configure the Static deploy
+Click Deploy → Deploy to production.
+
+Choose Static pages (the laptop icon).
+
+Build command: npm run build
+
+Output directory: dist
+
+Leave “Install command” blank—Replit will run npm install automatically.
+
+Press Deploy.
+
+Watch the log; it should show:
+
+rust
+Copy
+Edit
+vite v4.x.x  building for production...
+✓ 0.XXs build finished
+(If it stalls here, the Lucide imports weren’t trimmed correctly.)
+
+8 Verify the live URL
+Click the generated *.replit.app link.
+
+Do a hard refresh Cmd/Ctrl + Shift + R.
+
+Check mobile responsiveness with DevTools if that matters for you.
+
+9 (Optionally) attach a custom domain
+Deployment → Settings → Custom Domain → follow the DNS instructions.
