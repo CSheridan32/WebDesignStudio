@@ -54,7 +54,7 @@ export default function AboutSection() {
                 Let's Work Together
               </button>
               <a 
-                href="mailto:conall@conallsheridan.ie" 
+                href="mailto:hello@conallsheridan.com" 
                 className="border-2 border-ink-800 text-ink-800 px-8 py-3 rounded-full hover:bg-ink-800 hover:text-white transition-colors duration-200 text-center"
               >
                 Email Me Directly
