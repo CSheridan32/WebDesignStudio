@@ -76,7 +76,7 @@ export default function ContactSection() {
             Start your new website with one message. Let's discuss your project and how I can help.
           </p>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -90,12 +90,22 @@ export default function ContactSection() {
                 <Mail className="text-gold text-xl mr-4 mt-1" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:hello@conallsheridan.com" className="text-gray-300 hover:text-gold transition-colors">
-                    hello@conallsheridan.com
+                  <a href="mailto:conall@conallsheridan.ie" className="text-gray-300 hover:text-gold transition-colors">
+                    conall@conallsheridan.ie
                   </a>
                 </div>
               </div>
-              
+
+              <div className="flex items-start">
+                <div className="text-gold text-xl mr-4 mt-1">📱</div>
+                <div>
+                  <p className="font-medium">Phone & WhatsApp</p>
+                  <a href="tel:+353861688112" className="text-gray-300 hover:text-gold transition-colors">
+                    +353 86 1688112
+                  </a>
+                </div>
+              </div>
+
               <div className="flex items-start">
                 <Clock className="text-gold text-xl mr-4 mt-1" />
                 <div>
@@ -103,7 +113,7 @@ export default function ContactSection() {
                   <p className="text-gray-300">Usually within 24 hours</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <Calendar className="text-gold text-xl mr-4 mt-1" />
                 <div>
@@ -112,7 +122,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8 p-6 bg-gradient-to-br from-warm-800 to-ink-600 rounded-xl">
               <h4 className="font-playfair text-xl font-semibold mb-3">What happens next?</h4>
               <ul className="space-y-2 text-gray-300">
@@ -135,7 +145,7 @@ export default function ContactSection() {
               </ul>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -161,7 +171,7 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="email"
@@ -179,7 +189,7 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="business"
@@ -206,7 +216,7 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <FormField
                   control={form.control}
                   name="message"
@@ -225,7 +235,7 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                
+
                 <Button 
                   type="submit" 
                   disabled={contactMutation.isPending}
