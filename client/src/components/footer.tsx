@@ -67,10 +67,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a 
-                  href="mailto:hello@conallsheridan.com" 
+                  href="mailto:conall@conallsheridan.ie" 
                   className="text-warm-600 hover:text-ink-800 transition-colors"
                 >
-                  hello@conallsheridan.com
+                  conall@conallsheridan.ie
                 </a>
               </li>
               <li className="text-warm-600">Dublin, Ireland</li>
