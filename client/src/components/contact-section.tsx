@@ -90,11 +90,21 @@ export default function ContactSection() {
                 <Mail className="text-gold text-xl mr-4 mt-1" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <a href="mailto:hello@conallsheridan.com" className="text-gray-300 hover:text-gold transition-colors">
-                    hello@conallsheridan.com
+                  <a href="mailto:conall@conallsheridan.ie" className="text-gray-300 hover:text-gold transition-colors">
+                    conall@conallsheridan.ie
                   </a>
                 </div>
               </div>
+              
+              <div className="flex items-start">
+                <div className="text-gold text-xl mr-4 mt-1">📱</div>
+                <div>
+                  <p className="font-medium">Phone & WhatsApp</p>
+                  <a href="tel:+353861688112" className="text-gray-300 hover:text-gold transition-colors">
+                    +353 86 1688112
+                  </a>
+                </div>
+              </div></div>
               
               <div className="flex items-start">
                 <Clock className="text-gold text-xl mr-4 mt-1" />
