@@ -45,8 +45,8 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern web design workspace with laptop, design tools, and creative materials" 
+              src="/images/conall-headshot.jpeg" 
+              alt="Conall Sheridan – Web Designer" 
               className="rounded-xl shadow-2xl w-full h-auto"
             />
           </motion.div>
