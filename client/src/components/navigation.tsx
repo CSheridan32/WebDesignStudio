@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
-import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_19_09 PM_1750889973785.png";
+// Using headshot image from public directory
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,9 +20,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img 
-              src={logoImage} 
-              alt="Conall Sheridan Logo" 
-              className="h-10 w-auto"
+              src="/images/conall-headshot.jpeg" 
+              alt="Conall Sheridan" 
+              className="h-10 w-10 rounded-full object-cover"
             />
             <span className="font-playfair text-2xl font-semibold text-ink-800">
               Conall Sheridan
