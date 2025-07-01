@@ -41,7 +41,24 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('business', data.business || '');
+      formData.append('message', data.message);
+      
+      const response = await fetch("https://formspree.io/f/xdkzbjne", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        },
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      
       return response.json();
     },
     onSuccess: () => {
@@ -50,7 +67,6 @@ export default function ContactSection() {
         description: "Thank you for your message. I'll get back to you within 24 hours.",
       });
       form.reset();
-      queryClient.invalidateQueries({ queryKey: ['/api/contact-submissions'] });
     },
     onError: (error: any) => {
       toast({
