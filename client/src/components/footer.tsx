@@ -1,4 +1,4 @@
-// Using headshot image from public directory
+import logoImage from "@assets/ChatGPT Image Jun 25, 2025, 11_19_09 PM_1750889973785.png";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -15,9 +15,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/images/conall-headshot.jpeg" 
-                alt="Conall Sheridan" 
-                className="h-8 w-8 rounded-full object-cover"
+                src={logoImage} 
+                alt="Conall Sheridan Logo" 
+                className="h-8 w-auto"
               />
               <h3 className="font-playfair text-2xl font-semibold text-ink-800">Conall Sheridan</h3>
             </div>

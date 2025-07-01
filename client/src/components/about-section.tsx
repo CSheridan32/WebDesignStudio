@@ -19,8 +19,8 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img 
-              src="/images/conall-headshot.jpeg" 
-              alt="Conall Sheridan – Web Designer" 
+              src="/images/conall-profile.jpeg" 
+              alt="Conall Sheridan - Professional headshot" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </motion.div>
