@@ -19,7 +19,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img 
-              src="/images/conall-profile.jpeg" 
+              src="/images/conall-headshot-2025.jpeg" 
               alt="Conall Sheridan - Professional headshot" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
