@@ -154,95 +154,72 @@ export default function ContactSection() {
             className="bg-white p-8 rounded-xl"
           >
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-ink-800">Name *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          {...field} 
-                          className="focus:ring-gold focus:border-transparent text-ink-800"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
+              <form
+                action="https://formspree.io/f/xdkzbjne"
+                method="POST"
+                className="space-y-4"
+              >
+                <label className="block">
+                  <span className="text-sm font-medium text-gray-700">Your Name</span>
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="text-sm font-medium text-gray-700">Your Email</span>
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="text-sm font-medium text-gray-700">Business Type</span>
+                  <select
+                    name="businessType"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                  >
+                    <option value="">Select your industry</option>
+                    <option value="hairdresser">Hairdresser</option>
+                    <option value="cafe">Café / Restaurant</option>
+                    <option value="tradesperson">Tradesperson</option>
+                    <option value="small-firm">Small Firm</option>
+                  </select>
+                </label>
+
+                <label className="block">
+                  <span className="text-sm font-medium text-gray-700">Message</span>
+                  <textarea
+                    name="message"
+                    rows={4}
+                    required
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
+                    placeholder="Tell me about your business and what you need from your website…"
+                  />
+                </label>
+
+                {/* honeypot to trap bots */}
+                <input type="text" name="_gotcha" style={{ display: 'none' }} />
+
+                {/* optional: custom email subject */}
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New enquiry from conallsheridan.ie"
                 />
 
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-ink-800">Email *</FormLabel>
-                      <FormControl>
-                        <Input 
-                          type="email" 
-                          {...field} 
-                          className="focus:ring-gold focus:border-transparent text-ink-800"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="business"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-ink-800">Business Type</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger className="focus:ring-gold focus:border-transparent text-ink-800">
-                            <SelectValue placeholder="Select your industry" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="hairdresser">Hairdresser/Salon</SelectItem>
-                          <SelectItem value="cafe">Café/Restaurant</SelectItem>
-                          <SelectItem value="dentist">Dentist/Medical</SelectItem>
-                          <SelectItem value="plumber">Plumber</SelectItem>
-                          <SelectItem value="electrician">Electrician</SelectItem>
-                          <SelectItem value="law">Law Firm</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-ink-800">Message *</FormLabel>
-                      <FormControl>
-                        <Textarea 
-                          {...field} 
-                          rows={4}
-                          placeholder="Tell me about your business and what you need from your website..."
-                          className="focus:ring-gold focus:border-transparent text-ink-800"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button 
-                  type="submit" 
-                  disabled={contactMutation.isPending}
-                  className="w-full bg-ink-800 text-white hover:bg-ink-600 transition-colors duration-200"
+                <button
+                  type="submit"
+                  className="inline-block w-full rounded bg-yellow-400 px-6 py-3 text-center font-semibold text-white hover:bg-yellow-500"
                 >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
-                </Button>
+                  Send Message
+                </button>
               </form>
             </Form>
           </motion.div>
