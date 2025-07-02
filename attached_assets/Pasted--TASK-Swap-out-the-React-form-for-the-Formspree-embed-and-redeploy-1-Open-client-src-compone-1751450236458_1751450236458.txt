@@ -1,0 +1,73 @@
+### TASK: Swap out the React form for the Formspree embed and redeploy
+
+1. Open **client/src/components/contact-section.tsx**.
+2. Replace the entire existing `<form …>` block (and any associated `handleSubmit` code or fetch logic) with this JSX:
+
+```jsx
+<form
+  action="https://formspree.io/f/xdkzbjne"
+  method="POST"
+  className="space-y-4"
+>
+  <label className="block">
+    <span className="text-sm font-medium text-gray-700">Your Name</span>
+    <input
+      type="text"
+      name="name"
+      required
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+    />
+  </label>
+
+  <label className="block">
+    <span className="text-sm font-medium text-gray-700">Your Email</span>
+    <input
+      type="email"
+      name="email"
+      required
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+    />
+  </label>
+
+  <label className="block">
+    <span className="text-sm font-medium text-gray-700">Business Type</span>
+    <select
+      name="businessType"
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+    >
+      <option value="">Select your industry</option>
+      <option value="hairdresser">Hairdresser</option>
+      <option value="cafe">Café / Restaurant</option>
+      <option value="tradesperson">Tradesperson</option>
+      <option value="small-firm">Small Firm</option>
+    </select>
+  </label>
+
+  <label className="block">
+    <span className="text-sm font-medium text-gray-700">Message</span>
+    <textarea
+      name="message"
+      rows={4}
+      required
+      className="mt-1 block w-full rounded-md border-gray-300 shadow-sm"
+      placeholder="Tell me about your business and what you need from your website…"
+    />
+  </label>
+
+  {/* honeypot to trap bots */}
+  <input type="text" name="_gotcha" style={{ display: 'none' }} />
+
+  {/* optional: custom email subject */}
+  <input
+    type="hidden"
+    name="_subject"
+    value="New enquiry from conallsheridan.ie"
+  />
+
+  <button
+    type="submit"
+    className="inline-block w-full rounded bg-yellow-400 px-6 py-3 text-center font-semibold text-white hover:bg-yellow-500"
+  >
+    Send Message
+  </button>
+</form>
